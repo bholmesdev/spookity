@@ -1,0 +1,23 @@
+{
+  "name": "spookity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0-beta.3",
+    "autoprefixer": "^10.4.0",
+    "postcss": "^8.3.11",
+    "slinkity": "github:slinkity/slinkity#main-canary-0.3.0",
+    "tailwindcss": "^2.2.17"
+  },
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  }
+}

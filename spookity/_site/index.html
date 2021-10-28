@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/@input/global.scss">
+  <title>Heeeeeres Slinkity!</title>
+</head>
+
+<body>
+  <slinkity-react-mount-point data-s-id="0" data-s-needs-ssr="true"></slinkity-react-mount-point>
+
+<script type="module">
+  import MountPoint from "slinkity/lib/plugin/reactPlugin/_client/_mount-point.js";
+  window.customElements.define("slinkity-react-mount-point", MountPoint);
+</script>
+<script type="module">
+    import Component from "/@root/src/index.jsx";
+    import eagerLoader from "slinkity/lib/plugin/reactPlugin/_client/_eager-loader.js";
+  
+    eagerLoader({ 
+      id: "0",
+      Component,
+      props: {},
+    });
+  </script></body>
+
+</html>
