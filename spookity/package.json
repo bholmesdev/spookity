@@ -12,6 +12,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0-beta.3",
     "autoprefixer": "^10.4.0",
+    "eleventy-plugin-prismic": "^0.1.1",
     "postcss": "^8.3.11",
     "slinkity": "github:slinkity/slinkity#main-canary-0.3.0",
     "tailwindcss": "^2.2.17"
