@@ -1,0 +1,11 @@
+h1 {
+  @apply text-6xl;
+}
+
+body {
+  @apply p-8 min-h-full bg-gray-900 text-white max-w-3xl m-auto;
+}
+
+p {
+  @apply mb-5;
+}
