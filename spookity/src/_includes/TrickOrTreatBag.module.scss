@@ -1,0 +1,13 @@
+.bag {
+  --anim-duration: 500ms;
+  animation: 
+
+  @keyframes identifier {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+  }
+}
