@@ -20,8 +20,10 @@ npm i
 ## Usage
 
 ```sh
-slinkity --serve --incremental
+npm start
 ```
+
+This starts the Slinkity dev server with the `--incremental` flag.
 
 ## Run tests
 
