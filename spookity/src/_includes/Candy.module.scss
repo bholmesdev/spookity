@@ -1,0 +1,15 @@
+.candy {
+  position: absolute;
+  left: calc(24px + 1px * var(--startingX, 0));
+  top: calc(-80px + 1px * var(--startingY, 0));
+  animation: fall-into-bag calc(1ms * var(--animDuration)) ease-out forwards;
+
+  @apply text-6xl;
+
+  @keyframes fall-into-bag {
+    to {
+      opacity: 0.5;
+      transform: translateY(100px);
+    }
+  }
+}

@@ -1,10 +1,15 @@
-const House = ({ title, children, onClick }) => (
+import style from './House.module.scss'
+
+const House = ({ title, image, href, children, onClick }) => (
   <article className="flex flex-col gap-4">
+    <a className={style['house-link']} href={href}>
+      <img src={image} alt={title} />
+    </a>
     <h2 className="text-xl">{title}</h2>
     <div>
       {children}
     </div>
-    <button onClick={onClick} className="bg-purple-700 px-6 py-2 rounded-md hover:bg-yellow-500 transform hover:rotate-2 transition-all">Take candy 🍬</button>
+    <button onClick={onClick} className="spooky-hover mt-auto">Take candy 🍬</button>
   </article>
 )
 

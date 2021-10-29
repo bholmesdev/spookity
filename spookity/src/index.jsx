@@ -8,29 +8,34 @@ export const frontMatter = {
   layout: 'layout',
 }
 
-const HeeeeeeresSlinkity = () => {
+export function getProps({ prismic, shortcodes }) {
+  return {
+    houses: prismic.house.map(({ uid, data }) => {
+      return ({
+        title: shortcodes.asText(data.family_name),
+        subtext: data.house_photo.alt,
+        url: `/stories/${uid}/`,
+        image: data.house_photo.url,
+      })
+    })
+  }
+}
+
+const HeeeeeeresSlinkity = ({ houses }) => {
   const [numCandies, setNumCandies] = useLocalStorage('numCandies', 0)
   const onGetCandy = () => setNumCandies(numCandies + 1)
-
-  useEffect(() => {
-    console.log({numCandies})
-  }, [numCandies])
 
   return (
     <main className="p-4 bg-gray-900 text-white min-h-screen">
       <h1 className="max-w-4xl text-5xl mb-3 mx-auto">{frontMatter.title}</h1>
-      <dl className="max-w-4xl grid grid-cols-3 gap-8 justify-center mx-auto">
-        <House title="House 1" onClick={onGetCandy}>
-          <p>A very spooky abode indeed</p>
-        </House>
-        <House title="House 2" onClick={onGetCandy}>
-          <p>A very spooky abode indeed</p>
-        </House>
-        <House title="House 3" onClick={onGetCandy}>
-          <p>A very spooky abode indeed</p>
-        </House>
+      <div className="max-w-4xl grid grid-cols-3 gap-8 justify-center mx-auto">
+        {houses.map(({ title, subtext, url, image }) => (
+          <House key={title} title={title} image={image} href={url} onClick={onGetCandy}>
+            <p>{subtext}</p>
+          </House>
+        ))}
         <TrickOrTreatBag numCandies={numCandies} />
-      </dl>
+      </div>
     </main>
   )
 }

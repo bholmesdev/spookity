@@ -1,0 +1,40 @@
+.house-link {
+  transition: transform 0.2s;
+  position: relative;
+
+  &::before {
+    content: '';
+    transform: scale(0);
+    transition: transform 0.2s;
+    position: absolute;
+    @apply bg-gray-800 rounded-lg w-full h-full;
+  }
+
+  &::after {
+    content: 'Come inside... if you dare';
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    font-family: YIKES;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    @apply w-full bg-yellow-500 text-gray-800;
+  }
+
+  img {
+    position: relative;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+
+    &::before {
+      transform: scale(1);
+    }
+
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+}
