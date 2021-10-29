@@ -8,6 +8,10 @@
   font-display: swap;
 }
 
+html {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -19,4 +23,8 @@ h6 {
 
 .yikes {
   font-family: YIKES;
+}
+
+.spooky-hover {
+  @apply bg-purple-700 px-6 py-2 font-bold rounded-md hover:bg-yellow-500 transform hover:rotate-2 transition-all;
 }
