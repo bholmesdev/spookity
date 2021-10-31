@@ -5,7 +5,7 @@ const House = ({ title, image, href, children, onClick }) => (
     <a className={style['house-link']} href={href}>
       <img src={image} alt={title} />
     </a>
-    <h2 className="text-xl">{title}</h2>
+    <h2 className="text-2xl">{title}</h2>
     <div>
       {children}
     </div>
