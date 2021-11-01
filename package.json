@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "slinkity --serve --incremental",
+    "build": "slinkity",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

@@ -17,7 +17,7 @@
 npm i
 ```
 
-## Usage
+## Running the dev server
 
 ```sh
 npm start
@@ -25,11 +25,13 @@ npm start
 
 This starts the Slinkity dev server with the `--incremental` flag.
 
-## Run tests
+## Building for production
 
 ```sh
-npm run test
+npm run build
 ```
+
+This bundles your project using Vite's rollup production build.
 
 ## Author
 
